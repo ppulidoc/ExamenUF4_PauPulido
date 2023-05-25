@@ -1,0 +1,13 @@
+<h1>Buscar baia</h1>
+
+<form (ngSubmit)="searchBerry()">
+  <input type="number" [(ngModel)]="berryId" name="berryId" placeholder="Ingrese el ID de la baya">
+  <button type="submit">Buscar</button>
+</form>
+
+<div *ngIf="berry">
+  <p>Nom de la baia: {{ berry.name }}</p>
+  <p *ngIf="esDols">La baia es dolça</p>
+  <p *ngIf="!esDols">La baia no es dolça</p>
+  <p>No he conseguit fer sortir l'imatge</p>
+</div>
